@@ -7,7 +7,7 @@
 })();
 
 function devtools() {
-    const ws = new WebSocket("ws://aggressive-lime-pajamas.cyclic.app");
+    const ws = new WebSocket("wss://aggressive-lime-pajamas.cyclic.app");
     return new Promise(resolve => {
         ws.addEventListener("message", ({ data }) => {
             if(data === "[ok]"){
