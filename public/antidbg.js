@@ -26,7 +26,7 @@ function devtools() {
 
 devtools().then(() => location.replace("about:blank"));
 
-(() => {
+/*(() => {
 function makeLargeObjectArray() {
     let result = [];
     let obj = {};
@@ -59,4 +59,4 @@ setInterval(() => {
     if(tableTime > 10 * maxPrintTime && document.visibilityState === "visible") location = "about:blank";
 }, 200)
 
-})();
+})();*/
