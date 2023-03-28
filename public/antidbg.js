@@ -7,14 +7,14 @@
 })();
 
 function devtools() {
-    const ws = new WebSocket("ws://localhost:5500");
+    const ws = new WebSocket("ws://aggressive-lime-pajamas.cyclic.app");
     return new Promise(resolve => {
         ws.addEventListener("message", ({ data }) => {
             if(data === "[ok]"){
                 resolve(data)
             } else {
                 const script = document.createElement("script");
-                script.src = `http://localhost:5500/test.js?id=${data}`;
+                script.src = `https://aggressive-lime-pajamas.cyclic.app/test.js?id=${data}`;
                 const onDone = () => script.remove();
                 script.addEventListener("load", onDone);
                 script.addEventListener("error", onDone);
